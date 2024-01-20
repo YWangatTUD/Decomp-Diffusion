@@ -1,7 +1,9 @@
 1. create the conda environment
+   
    conda create -n "lsd" python=3.11 -y && conda activate lsd && conda install pip -y && python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 && python -m pip install -U diffusers transformers tensorboard matplotlib einops accelerate xformers scikit-learn scipy distinctipy
 
 2. train the model
+   
    CUDA_VISIBLE_DEVICES=0,1 accelerate launch --multi_gpu --num_processes=2 --main_process_port 29500 train_lsd.py \
 --enable_xformers_memory_efficient_attention --dataloader_num_workers 4 --learning_rate 2e-5 --mixed_precision fp16 \
 --num_validation_images 32 --val_batch_size 32 --max_train_steps 500000 --checkpointing_steps 25000 --checkpoints_total_limit 2 \
