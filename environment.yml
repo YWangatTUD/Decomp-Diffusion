@@ -134,4 +134,3 @@ dependencies:
       - werkzeug==3.0.0
       - xformers==0.0.22
       - zipp==3.17.0
-prefix: /users/ywang86/anaconda3/envs/lsd
