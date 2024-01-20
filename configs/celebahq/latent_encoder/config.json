@@ -1,0 +1,9 @@
+{
+  "_class_name": "LatentEncoder",
+  "_diffusers_version": "0.21.4",
+  "in_channels": 3,
+  "enc_channels": 128,
+  "num_components": 4,
+  "image_size": 128,
+  "latent_dim": 64
+}
